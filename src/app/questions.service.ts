@@ -1,4 +1,6 @@
 import { Http, Headers } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import { Injectable } from '@angular/core';

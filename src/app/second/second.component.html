@@ -1,3 +1,27 @@
-<p>
-  second works!
-</p>
+<div class=timer>
+  <strong>{{ticks2}} seconds</strong>
+</div>
+<div class="card">
+<div class="card-content"><h3>{{items[1]?.id}}. {{items[1]?.statment}} ?</h3>
+  <input name="options" type="radio" [(ngModel)]="value2" [value]="1"
+       [checked]="value2==A" />{{options[0].A}}
+  <br/><br/>
+  <input name="options" type="radio" [(ngModel)]="value2" [value]="2"
+         [checked]="value2==B" />{{options[1].B}}
+  <br/><br/>
+  <input name="options" type="radio" [(ngModel)]="value2" [value]="3"
+       [checked]="value2==C" />{{options[2].C}}
+  <br/><br/>
+  <input name="options" type="radio" [(ngModel)]="value2" [value]="4"
+       [checked]="value2==D" />{{options[3].D}}
+  <br/><br/>
+
+
+</div>
+</div>
+
+<div class="buttoncontainer">
+<button class="btn1" (click)="OnDestroy()"><a routerLink="/first">Previous</a></button>
+<button class="btn2" (click)="OnDestroy()"><a routerLink="/result">Submit</a></button>
+<button class="btn3" (click)="OnDestroy()"><a routerLink="/third">Next</a></button>
+</div>

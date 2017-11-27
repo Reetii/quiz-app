@@ -1,0 +1,63 @@
+.timer{
+  float:right;
+  text-align:left;
+  border-bottom: 2px solid white;
+  padding:1% 0;
+  order:1;
+
+}
+.card{
+  margin-top:12%;
+  height: 400px;
+  width:800px;
+  background: #fff;
+ border-radius: 2px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+}
+.buttoncontainer{
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 90%;
+  flex-wrap: nowrap;
+}
+.btn1,.btn2,.btn3{
+      padding: 1em;
+      font-size: .9em;
+      margin: .3em;
+      color: white;
+      text-decoration: none;
+      flex-grow: 1;
+      text-align: center;
+      border:2px solid white;
+      background: #17171E;
+      text-decoration: none;
+      text-transform: uppercase;
+
+
+}
+.btn1:hover,.btn2:hover,.btn3:hover{
+  background: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+    color: white;
+    margin:0 auto;
+    text-transform:uppercase;
+
+}
+.card-content{
+  color:black;
+  padding:5%;
+  text-align: left;
+}

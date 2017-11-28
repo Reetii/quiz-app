@@ -2,6 +2,9 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import { QuestionsService } from '../questions.service';
 import {Subscription} from "rxjs";
 import {TimerObservable} from "rxjs/observable/TimerObservable";
+import {SharingService } from '../sharing.service';
+
+
 
 @Component({
   selector: 'app-first',
@@ -12,29 +15,40 @@ import {TimerObservable} from "rxjs/observable/TimerObservable";
 })
 export class FirstComponent implements OnInit, OnDestroy {
  items:any;
- value1 = "Not attempted";
+ public value1 = "Not attempted";
  options:any;
- ticks1:any;
+ public ticks1:any = 0;
+ public totalticks1:any = 0;
  private subscription: Subscription;
- constructor(private _questions:QuestionsService) {
+ constructor(private _questions:QuestionsService, public _sharingService:SharingService) {
    this._questions.gquestion().subscribe(items => {
    this.items =items.questions;
    this.options = items.questions[0].options;
 
-   console.log(this.options);
 
  });
+
+
 }
+
+
 ngOnInit() {
-    let timer = TimerObservable.create(2000, 1000);
+    let timer = TimerObservable.create(1000, 1000);
     this.subscription = timer.subscribe(ticks1 => {
-      this.ticks1 = ticks1;
+      this.ticks1 = this.totalticks1 + ticks1;
+
     });
   }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
-    console.log(this.ticks1);
+    this.totalticks1 = this.totalticks1 + this.ticks1;
+    console.log(this.totalticks1);
+    this._sharingService.setVal1(this.value1);
+    this._sharingService.setTicks1(this.ticks1);
   }
+
+
+
 
 }

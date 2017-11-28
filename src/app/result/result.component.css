@@ -1,0 +1,99 @@
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.cards li {
+  border-radius:5px;
+  background-color: white;
+  color:black;
+  flex: 1 1 200px;
+  height:300px;
+  width:250px;
+
+}
+
+
+.cards h2 {
+  color:#FF7400;
+  font-weight: lighter;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+.heading{
+  border-bottom:1px solid #FF7400;
+  width:70%;
+  margin:0 auto;
+}
+
+.cards p {
+  padding: 5% 15%;
+  width: 70%;
+  text-align: left;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.flex li {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /*grid-template-columns: repeat(auto-fill, minmax(200px 1fr));*/
+  grid-gap: 20px;
+}
+.buttoncontainer{
+  margin: 10% auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  flex-wrap:wrap;
+}
+.btn1,.btn2,.btn3{
+      padding: 1em;
+      font-size: .9em;
+      margin: 1em;
+      color: white;
+      text-decoration: none;
+      flex-grow: 1;
+      text-align: center;
+      border:2px solid white;
+      background: #17171E;
+      text-decoration: none;
+      text-transform: uppercase;
+
+
+}
+.btn1:hover,.btn2:hover,.btn3:hover{
+  background: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+    color: white;
+    margin:0 auto;
+    text-transform:uppercase;
+
+}

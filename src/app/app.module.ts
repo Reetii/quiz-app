@@ -9,8 +9,9 @@ import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
 import { ResultComponent } from './result/result.component';
 import { QuestionsService } from './questions.service';
+import { SharingService } from './sharing.service';
 import { HttpClientModule } from '@angular/common/http';
- import { HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     routing
   ],
-  providers: [QuestionsService],
+  providers: [QuestionsService, SharingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
